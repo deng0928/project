@@ -1,0 +1,253 @@
+//自定义组件
+
+
+
+.DN .el-table::before{
+    height:0
+}
+//250px的input
+.input-250px{
+    width:250px !important;
+}
+
+
+.DN thead tr th{
+    background: #f8f8f8;
+    border-bottom:1px solid #eee;
+    height:40px;
+    padding:0
+}
+
+.listitem .DN.el-table{
+    margin-top:18px;
+}
+.listitem .DN.el-table td{
+    padding:7px 0
+}
+.DN .btn_yl{
+    border:1px solid #ff901e;
+    color:#ff901e;
+    background:none;
+    &:hover{
+        color: #fff;
+        background: #ff901e;
+        border-color: #ff901e;
+        outline: 0;
+    }
+}
+.DN .btn_default{
+    border:1px solid #6b6b6b;
+    color:#6b6b6b;
+    background:none;
+    &:hover{
+        color: #fff;
+        background: #6b6b6b;
+        border-color: #6b6b6b;
+        outline: 0;
+    }
+}
+.DN .btn_yl,.DN .btn_default{
+    display: inline-block;
+    padding:8px 17px;
+}
+.listitem .el-collapse-item__content{
+    padding-bottom: 0;
+}
+.listitem .el-collapse-item__wrap{
+    border-bottom:none;
+}
+.el-tooltip__popper.is-light{
+    padding:4px 10px!important;
+    border: 1px solid #eee!important;
+    color:#888
+}
+.el-tooltip__popper.is-light[x-placement^=top] .popper__arrow {
+    border-top-color: #d2cccc !important;
+}
+.DN .el-form-item__content{
+    display: flex;
+    align-items: center;
+}
+.DN .el-button--warning{
+    background: #ff901d;
+    border-color:#ff901d;
+    &:hover{
+        background: #ebb563 !important;
+        border-color:#ebb563 !important;
+    }
+}
+.DN .el-button{
+    height: 32px;
+    line-height: 30px;
+    padding:0 18px
+}
+//tabs标签页灰白配色
+.DN .el-tabs__item {
+    color: #090909;
+    background:#f8f8f8;
+}
+.DN .el-tabs__item:hover{
+    color:#090909;
+}
+.DN .el-tabs__item.is-active{
+    background:#fff;
+    color:#090909;
+}
+
+//给表格的 标题栏添加颜色
+
+.DN .el-table__header-wrapper th,.DN .el-table__header-wrapper tr{
+    background: #f8f8f8 !important;
+}
+
+.DN{
+    .el-breadcrumb{
+        display: inline-block;
+    }
+}
+.textareaend{
+    color: #3c3c3c;
+    margin-left: -67px;
+    line-height: 2;
+    vertical-align: bottom;
+    width: 60px;
+    display: inline-block;
+    text-align: right;
+    z-index: 999;
+    position: absolute;
+    top: 88px;
+}
+
+
+.pagetab{
+    height:50px;
+    line-height: 50px;
+    padding-left:30px;
+    background: #fff;
+    ul{
+        li{
+            float: left;
+            margin-right: 30px;
+            background:none;
+            height:50px;
+            button{
+                font-size:16px;
+                background:none;
+                display: block;
+                height:100%;
+                position: relative;
+                cursor: pointer;
+            }
+            button.active ,button:hover{
+                &:after{
+                    display: block;
+                    width:100%;
+                    height:2px;
+                    background: #ff901e;
+                    content: '';
+                    position:absolute;
+                    bottom:-1px;
+                }
+            }
+        }
+    }
+
+}
+.el-checkbox-group{
+    display: inline-block;
+}
+.itemgroup{
+    width:900px;
+    height:330px;
+    position:absolute;
+    left:10%;
+    bottom:-332px;
+    background: #fff;
+    border:1px solid #eee;
+    border-radius:3px;
+    margin-left:3px;
+    box-shadow:2px 2px 2px rgba(0,0,0,.2);
+    z-index:99;
+    box-sizing: border-box;
+    padding:15px 65px;
+    .prev,.next{
+        position:absolute;
+    }
+    .prev{
+        left:13px;
+        top:15px;
+    }
+    .next{
+        right:15px;
+        top:15px;
+    }
+    .groupbox{
+        width:768px;
+        overflow: hidden;
+        .hd{
+            &:after{
+                clear: both;
+                content: '';
+                display: block;
+            }
+            li{
+                height:34px;
+                width:116px;
+                margin-left:10px;
+                background:red;
+                float: left;
+                border-radius:3px;
+                cursor: pointer;
+                background:#eee;
+                text-align:center;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                padding:0 5px;
+                box-sizing: border-box;
+                color:#3c3c3c;
+                &.active,&:hover{
+                    background:#ff901e;
+                    color:#fff
+                }
+            }
+            -webkit-transition: all .3s ease;
+            -moz-transition: all .3s ease;
+            -ms-transition: all .3s ease;
+            -o-transition: all .3s ease;
+            transition: all .3s ease;
+        }
+        .bd{
+            margin-top:20px;
+            li.li-item{
+                width: 748px;
+                margin:0 10px;
+                box-sizing:border-box;
+                padding:5px 15px;
+                border:1px solid #dad3d3;
+                border-radius:3px;
+                line-height:20px;
+                margin-bottom:10px;
+                cursor: pointer;
+                &:hover{
+                    background:#eee;
+                }
+                &:after{
+                    clear: both;
+                    content: '';
+                    display: block;
+                }
+                .grid-content,.price{
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+                .price{
+                    text-align: right;
+                    color:#ff901e;
+                }
+            }
+        }
+    }
+}
+
